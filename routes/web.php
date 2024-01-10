@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::view('/profile/edit', 'profile.edit')->middleware('auth');
+Route::view('/profile/password', 'profile.password')->middleware('auth');
